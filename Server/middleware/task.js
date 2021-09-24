@@ -25,13 +25,13 @@ const taskIsValid = (newTask) => {
 
 module.exports = {
   retrieveTasks: async (req, res, next) => {
-    let username = "Pioneer1541";
+    let username = process.env.ACCOUNT_USERNAME;
     req.tasks = await Task.find({ username: username });
     console.log(req.tasks)
     next();
   },
   createTask: async (req, res, next) => {
-    const username = "Pioneer1541";
+    const username = process.env.ACCOUNT_USERNAME;
     const task = req.body;
     validResult = true;
     if (validResult) {

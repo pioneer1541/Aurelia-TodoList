@@ -1,0 +1,38 @@
+<template class="modal-dialog">
+  <ai-dialog class="modal-content">
+    <ux-dialog-header class="modal-header">
+      <h5 class="modal-title">Details of ${taskTitle}</h5>
+    </ux-dialog-header>
+
+     <ai-dialog-body class="modal-body">
+      <div class="container">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input type="text" class="form-control" value.bind="taskTitle" placeholder="Task Title" required>
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Description</label>
+            <textarea  type="text" class="form-control" value.bind="taskDescription" placeholder="Task Description" required></textarea>
+          </div>
+    
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Start Date</label>
+            <input type="date" class="form-control" value.bind="taskStartDate" required>
+          </div>
+    
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">End Date</label>
+            <input type="date" class="form-control" value.bind="taskEndDate" required>
+          </div>
+        </form>
+      </div>
+     </ai-dialog-body>
+
+     <ai-dialog-footer class="modal-footer">
+      <button class="btn btn-primary" click.trigger = "controller.cancel()">Cancel</button>
+      <button class="btn btn-primary" click.trigger = "controller.ok(response('delete'))">Delete</button>
+      <button class="btn btn-primary" click.trigger = "controller.ok(response('update'))">Update</button>
+     </ai-dialog-footer>	
+  </ai-dialog>	
+</template>

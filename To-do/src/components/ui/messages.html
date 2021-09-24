@@ -1,0 +1,15 @@
+<template class="modal-dialog">
+  <ai-dialog class="modal-content">
+    <ux-dialog-header class="modal-header">
+      <h5 class="modal-title">${title}</h5>
+    </ux-dialog-header>
+
+     <ai-dialog-body class="modal-body">
+        ${content}
+     </ai-dialog-body>
+
+     <ai-dialog-footer class="modal-footer">
+        <button class="btn btn-primary" click.trigger = "controller.ok(message)">OK</button>
+     </ai-dialog-footer>	
+  </ai-dialog>	
+</template>
